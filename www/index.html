@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <meta
+      name="viewport"
+      content="initial-scale=1, width=device-width, viewport-fit=cover"
+    />
+    <link rel="manifest" href="/manifest.json" />
+    <link rel="stylesheet" type="text/css" href="css/index.css" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <script>
+      window.addEventListener("load", () => {
+        if ("serviceWorker" in navigator) {
+          navigator.serviceWorker
+            .register("sw.js", { scope: "./" })
+            .then(function (reg) {});
+        }
+      });
+    </script>
+    <title>Ranking App</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="header">
+        <h1>Ranking App</h1>
+      </div>
+      <span class="title">1) Animés</span>
+      <span onclick="navigateAddPage()">Ajouter</span>
+      <div class="scrollableRow" id="list"></div>
+    </div>
+    <button onclick="getCurrentPosition()" class="btn btn-primary">
+      Get current position
+    </button>
+    <script src="cordova.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/manga.js"></script>
+    <script src="js/navigate.js"></script>
+    <script src="js/navigation.js"></script>
+  </body>
+</html>

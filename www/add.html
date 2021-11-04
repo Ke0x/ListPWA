@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="form-group">
+        <label>Titre</label>
+        <input
+          type="text"
+          class="form-control"
+          id="title_id"
+          placeholder="Nom de l'animé"
+        />
+      </div>
+      <div class="form-group">
+        <label for="exampleInputPassword1">Description</label>
+        <textarea
+          type="text"
+          class="form-control"
+          id="description_id"
+          placeholder="Description de l'animé"
+        ></textarea>
+      </div>
+      <div class="form-group">
+        <label>Image</label>
+        <input
+          type="text"
+          class="form-control"
+          id="image_id"
+          placeholder="Lien vers l'image"
+        />
+      </div>
+      <div class="form-check"></div>
+      <button onclick="addElement()" class="btn btn-primary">Ajouter</button>
+    </div>
+    <script src="js/add.js"></script>
+  </body>
+</html>
